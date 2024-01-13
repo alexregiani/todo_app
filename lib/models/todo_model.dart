@@ -9,12 +9,12 @@ enum Filter {
   completed,
 }
 
-class Todo extends Equatable {
+class TodoModel extends Equatable {
   final String id;
   final String description;
   final bool completion;
 
-  Todo({
+  TodoModel({
     String? id,
     required this.description,
     this.completion = false,
@@ -24,5 +24,6 @@ class Todo extends Equatable {
   List<Object> get props => [id, description, completion];
 
   @override
-  String toString() => 'Todo{id: $id, description: $description, completion: $completion}';
+  String toString() =>
+      'Todo{id: $id, description: $description, completion: $completion}';
 }
